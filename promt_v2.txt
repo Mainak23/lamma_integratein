@@ -1,0 +1,51 @@
+As an experienced data entry operator, extract the table from the given image, including all rows and columns. Ensure you capture and list the following details:
+
+Invoice Number/Buyer's Order Number
+GST Number
+Invoice Date
+PO Number
+Total Amount
+Total Items
+Total Cost
+Additionally, extract the table data with the following columns:
+
+For the line items table, include the following columns:
+- Sl. No
+- Description
+- Code
+- Total
+
+Your output should ONLY include the extracted data in the following **exact JSON format** with no extra explanations or variations:
+
+{
+  'InvoiceSummary': {
+    'InvoiceNumber': ,
+    'GSTNumber': ,
+    'Invoice Date/bill date': ,
+    'PurchaseOrderNumber': ,
+    'TotalAmount':,
+    'TotalItems': ,
+    'TotalCost': 
+    'Buyer's Order Number': ,
+  },
+  'LineItems': [
+    {
+      'SlNo': 1,
+      'Description': 'Item A',
+      'Code': 'A123',
+      'Total': 10
+    },
+    {
+      'SlNo': 2,
+      'Description': 'Item B',
+      'Code': 'B456',
+      'Total': 20
+    },
+    {
+      'SlNo': 3,
+      'Description': 'Item A',
+      'Code': 'A123',
+      'Total': 10
+    }
+  ]
+}
